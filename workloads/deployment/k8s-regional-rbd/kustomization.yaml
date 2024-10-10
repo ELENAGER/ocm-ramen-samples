@@ -9,3 +9,11 @@ patches:
       - op: replace
         path: /spec/storageClassName
         value: rook-ceph-block
+
+  - target:
+      kind: PersistentVolumeClaim
+      name: extra-pvc
+    patch: |-
+      - op: replace
+        path: /spec/storageClassName
+        value: rook-ceph-block
