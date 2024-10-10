@@ -34,7 +34,12 @@ spec:
           volumeMounts:
             - name: varlog
               mountPath: /var/log
+            - name: extra
+              mountPath: /extra/log
       volumes:
         - name: varlog
           persistentVolumeClaim:
             claimName: busybox-pvc
+        - name: extra
+          persistentVolumeClaim:
+            claimName: extra-pvc
